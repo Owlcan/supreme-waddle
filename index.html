@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combat Academy Rules and Regulations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=MedievalSharp&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #44403c; /* stone-700 */
+            color: #a09893; /* stone-100 - User's updated color */
+        }
+        .medieval-title {
+            font-family: 'MedievalSharp', cursive;
+        }
+        .content-card { /* Will be used for tab panels */
+            background-color: #a09893; /* stone-200 - User's updated color */
+            color: #292524; /* stone-800 */
+            border: 2px solid #f59e0b; /* amber-500 */
+            border-top: none; /* Remove top border as tabs will form the top edge */
+        }
+        .content-card h2 { /* Styling for H2 within tab panels */
+            color: #78350f; /* amber-700 */
+            border-bottom: 2px solid #f59e0b; /* amber-500 */
+        }
+        .content-card h3 { /* Styling for H3 within tab panels */
+            color: #92400e; /* amber-600 */
+        }
+        .code-block {
+            background-color: #292524; /* stone-800 */
+            color: #eab308; /* yellow-500 */
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem; /* rounded-md */
+            font-family: monospace;
+            overflow-x: auto;
+            border: 1px solid #f59e0b; /* amber-500 */
+        }
+        .link-custom {
+            color: #b45309; /* amber-600 */
+            text-decoration: underline;
+        }
+        .link-custom:hover {
+            color: #f59e0b; /* amber-500 */
+        }
+        .placeholder-img {
+            width: 100%;
+            /* max-width: 300px; Default max-width, can be overridden */
+            height: auto; /* Crucial for maintaining aspect ratio */
+            border-radius: 0.5rem; /* rounded-lg */
+            margin: 1rem auto;
+            display: block;
+            border: 2px solid #f59e0b; /* amber-500 */
+        }
+        .gold-text {
+            color: #f59e0b; /* amber-500 */
+        }
+        .tab-button {
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            background-color: #57534e; /* stone-600 */
+            color: #e7e5e4; /* stone-200 */
+            border: 2px solid #f59e0b; /* amber-500 */
+            border-bottom: none;
+            border-radius: 0.5rem 0.5rem 0 0; /* rounded-t-lg */
+            font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+            margin-right: 0.25rem;
+        }
+        .tab-button:hover {
+            background-color: #78716c; /* stone-500 */
+        }
+        .tab-button.active {
+            background-color: #a09893; /* stone-200 (same as content-card bg) */
+            color: #78350f; /* amber-700 (same as content-card h2) */
+            border-bottom: 2px solid #a09893; /* Match content card bg to make it look connected */
+        }
+        .tab-panel {
+            /* content-card class styles this now */
+        }
+        .header-image-container {
+            display: flex;
+            justify-content: space-between; /* Distributes space between items */
+            align-items: center;
+            margin-bottom: 1rem; /* Replaces mb-4 */
+        }
+        .side-art {
+            flex-shrink: 0; /* Prevent shrinking */
+        }
+        .main-banner {
+            flex-grow: 1; /* Allow banner to take available space for centering */
+            display: flex;
+            justify-content: center; /* Center the image within this flex item */
+        }
+        /* New styles for iframe panels */
+        .iframe-panel {
+            height: 600px; /* Set a fixed height for iframes */
+            min-height: 400px;
+        }
+        .iframe-panel iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8">
+    <div class="container mx-auto max-w-5xl">
+        <header class="text-center mb-6">
+            <div class="header-image-container">
+                <img src="https://ik.imagekit.io/owlcan/README/tweeeens1.png" alt="Left Side Art" class="placeholder-img !max-w-[150px] md:!max-w-[200px] border-0 side-art">
+                
+                <div class="main-banner">
+                    <img src="https://ik.imagekit.io/owlcan/dslogo.png" alt="Academy Banner" class="placeholder-img !max-w-xs sm:!max-w-sm md:!max-w-md border-0 mx-auto">
+                </div>
+                
+                <img src="https://ik.imagekit.io/owlcan/README/tweeeens2.png" alt="Right Side Art" class="placeholder-img !max-w-[150px] md:!max-w-[200px] border-0 side-art">
+            </div>
+            <h1 class="medieval-title text-5xl md:text-6xl font-bold gold-text mb-2">Combat Academy</h1>
+            <p class="text-2xl md:text-3xl text-stone-300">Rules and Regulations</p>
+        </header>
+
+        <div id="tab-container" class="mb-0 flex flex-wrap justify-center">
+            <!-- Original tabs -->
+            <button class="tab-button active" data-tab="conduct">Academy Conduct</button>
+            <button class="tab-button" data-tab="getting-started">Getting Started</button>
+            <button class="tab-button" data-tab="bot-usage">Using The Bot</button>
+            <button class="tab-button" data-tab="fight-commands">Fight Commands</button>
+            <button class="tab-button" data-tab="diaper-rules">Diaper Rules</button>
+            <button class="tab-button" data-tab="helpful-links">Helpful Links</button>
+            <button class="tab-button" data-tab="dice-final">Dice Are Final</button>
+            
+            <!-- New iframe tabs - Add these for your layered content -->
+            <button class="tab-button" data-tab="fishing" data-iframe="./fishing.html">Fishing</button>
+            <button class="tab-button" data-tab="legacyweapons" data-iframe="/legacyweapons.html">Legacy Weapons</button>
+            <button class="tab-button" data-tab="regaliaarmor" data-iframe="/regaliaarmor.html">Regalia Armor</button>
+        </div>
+
+        <!-- Original content panels (keeping all your existing content) -->
+        <div id="conduct-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl">
+            <h2 class="medieval-title text-3xl font-semibold mb-6 pb-2">Academy Conduct</h2>
+            <div class="grid md:grid-cols-3 gap-6 items-start">
+                <div class="md:col-span-2 space-y-4">
+                    <p><strong class="gold-text">"Lawful" Combat:</strong> Must stay in Sparring Room channels. PvP outside designated areas may face consequences from staff. You can PvP outside these areas if you accept the risks.</p>
+                    <p><strong class="gold-text">PvP Agreement:</strong> You acknowledge that PvP may occur. Fight or flee to avoid conflict. This is a Combat Academy.</p>
+                    <p><strong class="gold-text">No Abuse:</strong> Ganging up or abusing players is forbidden. Access may be revoked. Play nice; no killing.</p>
+                    <p><strong class="gold-text">Character Creation:</strong> Owlcan only approves characters, no troubleshooting provided.</p>
+                    <p><strong class="gold-text">Rolls:</strong> Avoid superfluous rolls for actions a normal person wouldn't fail under extreme circumstances.</p>
+                    <p><strong class="gold-text">Mortality:</strong> You are not dead unless Owlcan states it. Do not circumvent death rules.</p>
+                    <p><strong class="gold-text">Server Nickname:</strong> Recommended to add your character name to your server nickname.</p>
+                    <p><strong class="gold-text">Uniforms:</strong> Femme-Cut and Masculine-Cut examples provided. Combinations are acceptable if a shirt, undershirt, vest, socks, bottoms, and underpants are present and reasonably unaltered.</p>
+                </div>
+                <img src="https://ik.imagekit.io/owlcan/README/sparring.png" alt="Sparring Rules Icon" class="placeholder-img hidden md:block !max-w-full md:!max-w-xs lg:!max-w-sm">
+            </div>
+        </div>
+
+        <!-- Keep all your existing panels here... -->
+        <div id="getting-started-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl hidden">
+            <!-- Your existing getting-started content -->
+        </div>
+
+        <div id="bot-usage-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl hidden">
+            <!-- Your existing bot-usage content -->
+        </div>
+
+        <div id="fight-commands-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl hidden">
+            <!-- Your existing fight-commands content -->
+        </div>
+        
+        <div id="diaper-rules-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl hidden">
+            <!-- Your existing diaper-rules content -->
+        </div>
+
+        <div id="helpful-links-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl hidden">
+            <!-- Your existing helpful-links content -->
+        </div>
+
+        <div id="dice-final-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl hidden">
+            <!-- Your existing dice-final content -->
+        </div>
+
+        <!-- New iframe panels -->
+        <div id="character-sheets-panel" class="tab-panel content-card iframe-panel p-6 rounded-b-lg shadow-xl hidden">
+            <iframe id="character-sheets-iframe" src="" title="Character Sheets"></iframe>
+        </div>
+
+        <div id="spell-reference-panel" class="tab-panel content-card iframe-panel p-6 rounded-b-lg shadow-xl hidden">
+            <iframe id="spell-reference-iframe" src="" title="Spell Reference"></iframe>
+        </div>
+
+        <div id="combat-tracker-panel" class="tab-panel content-card iframe-panel p-6 rounded-b-lg shadow-xl hidden">
+            <iframe id="combat-tracker-iframe" src="" title="Combat Tracker"></iframe>
+        </div>
+
+        <footer class="text-center mt-12 py-6 border-t-2 border-amber-600">
+            <p class="text-stone-300">&copy; Combat Academy - May your rolls be ever in your favor.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanels = document.querySelectorAll('.tab-panel');
+
+            // Show the first tab by default
+            if (tabButtons.length > 0 && tabPanels.length > 0) {
+                tabButtons[0].classList.add('active');
+                // The first panel (conduct-panel) is already visible by not having 'hidden'
+            }
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.dataset.tab;
+                    const iframeSrc = button.dataset.iframe;
+
+                    // Deactivate all buttons and hide all panels
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanels.forEach(panel => panel.classList.add('hidden'));
+
+                    // Activate clicked button and show corresponding panel
+                    button.classList.add('active');
+                    const targetPanel = document.getElementById(targetTab + '-panel');
+                    
+                    if (targetPanel) {
+                        targetPanel.classList.remove('hidden');
+                        
+                        // If this is an iframe tab, load the content
+                        if (iframeSrc) {
+                            const iframe = targetPanel.querySelector('iframe');
+                            if (iframe && iframe.src !== iframeSrc) {
+                                iframe.src = iframeSrc;
+                            }
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
