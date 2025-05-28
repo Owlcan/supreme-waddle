@@ -110,19 +110,20 @@
     <div class="container mx-auto max-w-5xl">
         <header class="text-center mb-6">
             <div class="header-image-container">
-                <img src="https://ik.imagekit.io/owlcan/README/tweeeens1.png" alt="Left Side Art" class="placeholder-img !max-w-[150px] md:!max-w-[200px] border-0 side-art">
+                <img src="images/tweeeens1.png" alt="Left Side Art" class="placeholder-img !max-w-[150px] md:!max-w-[200px] border-0 side-art">
                 
                 <div class="main-banner">
-                    <img src="https://ik.imagekit.io/owlcan/dslogo.png" alt="Academy Banner" class="placeholder-img !max-w-xs sm:!max-w-sm md:!max-w-md border-0 mx-auto">
+                    <img src="images/dslogo.png" alt="Academy Banner" class="placeholder-img !max-w-xs sm:!max-w-sm md:!max-w-md border-0 mx-auto">
                 </div>
                 
-                <img src="https://ik.imagekit.io/owlcan/README/tweeeens2.png" alt="Right Side Art" class="placeholder-img !max-w-[150px] md:!max-w-[200px] border-0 side-art">
+                <img src="images/tweeeens2.png" alt="Right Side Art" class="placeholder-img !max-w-[150px] md:!max-w-[200px] border-0 side-art">
             </div>
             <h1 class="medieval-title text-5xl md:text-6xl font-bold gold-text mb-2">Combat Academy</h1>
             <p class="text-2xl md:text-3xl text-stone-300">Rules and Regulations</p>
         </header>
 
         <div id="tab-container" class="mb-0 flex flex-wrap justify-center">
+            <!-- Original tabs -->
             <button class="tab-button active" data-tab="conduct">Academy Conduct</button>
             <button class="tab-button" data-tab="getting-started">Getting Started</button>
             <button class="tab-button" data-tab="bot-usage">Using The Bot</button>
@@ -130,34 +131,30 @@
             <button class="tab-button" data-tab="diaper-rules">Diaper Rules</button>
             <button class="tab-button" data-tab="helpful-links">Helpful Links</button>
             <button class="tab-button" data-tab="dice-final">Dice Are Final</button>
-            
-            <!-- New iframe tabs -->
-            <button class="tab-button" data-tab="fishing" data-iframe="fishing.html">Fishing</button>
-            <button class="tab-button" data-tab="legacyweapons" data-iframe="legacyweapons.html">Legacy Weapons</button>
-            <button class="tab-button" data-tab="regaliaarmor" data-iframe="regaliaarmor.html">Regalia Armor</button>
         </div>
 
+        <!-- Original content panels -->
         <div id="conduct-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl">
             <h2 class="medieval-title text-3xl font-semibold mb-6 pb-2">Academy Conduct</h2>
             <div class="grid md:grid-cols-3 gap-6 items-start">
                 <div class="md:col-span-2 space-y-4">
-                    <p><strong class="gold-text">"Lawful" Combat:</strong> Must stay in Sparring Room channels. PvP outside designated areas may face consequences from staff. You can PvP outside sparring rooms if you're looking for a fight by posting in #looking-for-a-fight.</p>
+                    <p><strong class="gold-text">"Lawful" Combat:</strong> Must stay in Sparring Room channels. PvP outside designated areas may face consequences from staff. You can PvP outside these areas if you accept the risks.</p>
                     <p><strong class="gold-text">PvP Agreement:</strong> You acknowledge that PvP may occur. Fight or flee to avoid conflict. This is a Combat Academy.</p>
                     <p><strong class="gold-text">No Abuse:</strong> Ganging up or abusing players is forbidden. Access may be revoked. Play nice; no killing.</p>
                     <p><strong class="gold-text">Character Creation:</strong> Owlcan only approves characters, no troubleshooting provided.</p>
                     <p><strong class="gold-text">Rolls:</strong> Avoid superfluous rolls for actions a normal person wouldn't fail under extreme circumstances.</p>
                     <p><strong class="gold-text">Mortality:</strong> You are not dead unless Owlcan states it. Do not circumvent death rules.</p>
                     <p><strong class="gold-text">Server Nickname:</strong> Recommended to add your character name to your server nickname.</p>
-                    <p><strong class="gold-text">Uniforms:</strong> Femme-Cut and Masculine-Cut examples provided. Combinations are acceptable if a shirt, undershirt, vest, socks, bottoms, and underwear are present.</p>
+                    <p><strong class="gold-text">Uniforms:</strong> Femme-Cut and Masculine-Cut examples provided. Combinations are acceptable if a shirt, undershirt, vest, socks, bottoms, and underpants are present and reasonably unaltered.</p>
                 </div>
-                <img src="https://ik.imagekit.io/owlcan/README/sparring.png" alt="Sparring Rules Icon" class="placeholder-img hidden md:block !max-w-full md:!max-w-xs lg:!max-w-sm">
+                <img src="images/sparring.png" alt="Sparring Rules Icon" class="placeholder-img hidden md:block !max-w-full md:!max-w-xs lg:!max-w-sm">
             </div>
         </div>
 
         <div id="getting-started-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl hidden">
             <h2 class="medieval-title text-3xl font-semibold mb-6 pb-2">Getting Started: Character Creation (Level 5)</h2>
             <div class="grid md:grid-cols-3 gap-6 items-start">
-                 <img src="https://ik.imagekit.io/owlcan/README/checkyoursheet.png" alt="Character Sheet Art" class="placeholder-img hidden md:block !max-w-full md:!max-w-xs lg:!max-w-sm">
+                 <img src="images/checkyoursheet.png" alt="Character Sheet Art" class="placeholder-img hidden md:block !max-w-full md:!max-w-xs lg:!max-w-sm">
                 <div class="md:col-span-2 space-y-4">
                     <p>This game uses Dungeons and Dragons 5th Edition. You'll need a character sheet. Compatible methods: Gsheet and D&D Beyond.</p>
                     <h3 class="text-xl font-semibold mt-4">Gsheet:</h3>
@@ -180,7 +177,7 @@
 
         <div id="bot-usage-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl hidden">
             <h2 class="medieval-title text-3xl font-semibold mb-6 pb-2">Using The Bot</h2>
-            <img src="https://ik.imagekit.io/owlcan/README/hugabot.png" alt="Bot Interface Concept" class="placeholder-img !max-w-md md:!max-w-lg mx-auto">
+            <img src="images/hugabot.png" alt="Bot Interface Concept" class="placeholder-img !max-w-md md:!max-w-lg mx-auto">
             <p class="mb-4">The bot has many useful commands. `<>` denotes required, `()` optional. Do not include brackets. Shortened commands are in `[]`.</p>
             <ul class="space-y-3">
                 <li><code class="code-block">!roll [!r] &lt;num_dice&gt;d&lt;sides&gt; (+ mod) (adv/dis) (-dc &lt;target_num&gt;)</code>: Rolls dice, can include modifiers, advantage/disadvantage, and specify DC.</li>
@@ -194,7 +191,7 @@
 
         <div id="fight-commands-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl hidden">
             <h2 class="medieval-title text-3xl font-semibold mb-6 pb-2">Fight Commands (Initiative System)</h2>
-             <img src="https://ik.imagekit.io/owlcan/README/image(1).png" alt="Dynamic Combat Scene" class="placeholder-img !max-w-md md:!max-w-lg mx-auto">
+             <img src="images/combat-scene.png" alt="Dynamic Combat Scene" class="placeholder-img !max-w-md md:!max-w-lg mx-auto">
             <p class="mb-4">The bot's initiative tracking system is invaluable for combat.</p>
             <p><strong class="gold-text">Starting Combat:</strong> One player uses <code class="code-block inline-block">!init begin</code>.</p>
             <p><strong class="gold-text">Joining Combat:</strong> Players use <code class="code-block inline-block">!init join (adv/dis if applicable)</code>.</p>
@@ -215,7 +212,7 @@
         <div id="diaper-rules-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl hidden">
             <h2 class="medieval-title text-3xl font-semibold mb-6 pb-2">Special Item Rules: Diapers</h2>
             <div class="flex flex-col md:flex-row items-start gap-6">
-                <img src="https://ik.imagekit.io/owlcan/README/getcrinkling.png" alt="Rules Scroll Icon" class="placeholder-img !max-w-[200px] md:!max-w-xs lg:!max-w-sm mx-auto md:mx-0">
+                <img src="images/getcrinkling.png" alt="Rules Scroll Icon" class="placeholder-img !max-w-[200px] md:!max-w-xs lg:!max-w-sm mx-auto md:mx-0">
                 <ul class="list-disc list-inside space-y-2 pl-4 flex-grow">
                     <li><strong class="gold-text">-5 Speed</strong> while diapered.</li>
                     <li><strong class="gold-text">-5 additional Speed</strong> when messy (total -10 Speed).</li>
@@ -228,7 +225,7 @@
 
         <div id="helpful-links-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl hidden">
             <h2 class="medieval-title text-3xl font-semibold mb-6 pb-2">Helpful Links</h2>
-            <img src="https://ik.imagekit.io/owlcan/README/features.png" alt="Library of Links" class="placeholder-img !max-w-md md:!max-w-lg mx-auto"> 
+            <img src="images/features.png" alt="Library of Links" class="placeholder-img !max-w-md md:!max-w-lg mx-auto"> 
             <ul class="list-disc list-inside space-y-2 pl-4 mt-6">
                 <li><a href="https://crobi.github.io/dnd5e-quickref/preview/quickref.html" target="_blank" class="link-custom">D&D 5e Quick Reference</a>: Actions your character can take.</li>
                 <li><a href="https://5thsrd.org/rules/abilities/strength/" target="_blank" class="link-custom">5e SRD: Strength (Carrying Capacity)</a>: How much your character can carry.</li>
@@ -238,22 +235,9 @@
         <div id="dice-final-panel" class="tab-panel content-card p-6 rounded-b-lg shadow-xl hidden"> 
             <h2 class="medieval-title text-3xl font-semibold mb-6 pb-2">Dice Are Final</h2>
             <div class="flex flex-col md:flex-row items-start gap-6">
-                <img src="https://ik.imagekit.io/owlcan/README/dicearefinal.png" alt="Dice of Destiny" class="placeholder-img !max-w-[200px] md:!max-w-xs lg:!max-w-sm mx-auto md:mx-0">
+                <img src="images/dicearefinal.png" alt="Dice of Destiny" class="placeholder-img !max-w-[200px] md:!max-w-xs lg:!max-w-sm mx-auto md:mx-0">
                 <p class="flex-grow">With exceptions like the Lucky feat, dice rolls are final. If you believe a roll is superfluous (auto-pass) or your passive skill is sufficient, you don't need to roll. But what's the fun in that?</p>
             </div>
-        </div> 
-
-        <!-- New iframe panels - FIXED IDs -->
-        <div id="fishing-panel" class="tab-panel content-card iframe-panel p-6 rounded-b-lg shadow-xl hidden">
-            <iframe src="" title="Fishing"></iframe>
-        </div>
-
-        <div id="legacyweapons-panel" class="tab-panel content-card iframe-panel p-6 rounded-b-lg shadow-xl hidden">
-            <iframe src="" title="Legacy Weapons"></iframe>
-        </div>
-
-        <div id="regaliaarmor-panel" class="tab-panel content-card iframe-panel p-6 rounded-b-lg shadow-xl hidden">
-            <iframe src="" title="Regalia Armor"></iframe>
         </div>
 
         <footer class="text-center mt-12 py-6 border-t-2 border-amber-600">
@@ -291,12 +275,10 @@
                         // If this is an iframe tab, load the content
                         if (iframeSrc) {
                             const iframe = targetPanel.querySelector('iframe');
-                            if (iframe && (!iframe.src || iframe.src !== window.location.origin + '/' + iframeSrc)) {
+                            if (iframe && iframe.src !== iframeSrc) {
                                 iframe.src = iframeSrc;
                             }
                         }
-                    } else {
-                        console.error('Panel not found:', targetTab + '-panel');
                     }
                 });
             });
